@@ -199,7 +199,8 @@ package ariane_pkg;
     FPU_VEC,    // 8
     CVXIF,      // 9
     ACCEL,      // 10
-    AES         // 11
+    AES,        // 11
+    VEC_FU      // 12
   } fu_t;
 
   // Index of writeback ports
@@ -328,6 +329,10 @@ package ariane_pkg;
     LB,
     SB,
     LBU,
+    // Custom Vector Extension for AI
+    VDOT,
+    VRELU,
+    VGELU,
     // Hypervisor Virtual-Machine Load and Store Instructions
     HLV_B,
     HLV_BU,

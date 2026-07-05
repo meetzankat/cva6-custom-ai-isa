@@ -1323,12 +1323,26 @@ module decoder
             else illegal_instr = 1'b1;
             default: illegal_instr = 1'b1;
           endcase
-          if (CVA6Cfg.RVH) begin
+         if (CVA6Cfg.RVH) begin
             tinst = {17'b0, instr.itype.funct3, instr.itype.rd, instr.itype.opcode};
             tinst[1] = is_compressed_i ? 1'b0 : 'b1;
           end
         end
-
+        // --------------------------------
+        // Custom Vector Extension for AI
+        // --------------------------------
+        riscv::OpcodeCustom0: begin
+          instruction_o.fu  = VEC_FU;
+          instruction_o.rs1 = instr.rtype.rs1;
+          instruction_o.rs2 = instr.rtype.rs2;
+          instruction_o.rd  = instr.rtype.rd;
+          unique case (instr.rtype.funct7)
+            7'b0000000: instruction_o.op = ariane_pkg::VDOT;
+            7'b0000001: instruction_o.op = ariane_pkg::VRELU;
+            7'b0000010: instruction_o.op = ariane_pkg::VGELU;
+            default: illegal_instr = 1'b1;
+          endcase
+        end
         // --------------------------------
         // Floating-Point Load/store
         // --------------------------------

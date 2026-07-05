@@ -68,6 +68,7 @@ module issue_read_operands
     output logic [CVA6Cfg.NrIssuePorts-1:0] alu_valid_o,
     // AES output is valid - EX_STAGE
     output logic [CVA6Cfg.NrIssuePorts-1:0] aes_valid_o,
+    output logic [CVA6Cfg.NrIssuePorts-1:0] vec_valid_o,
     // Branch unit is valid - EX_STAGE
     output logic [CVA6Cfg.NrIssuePorts-1:0] branch_valid_o,
     // Transformed trap instruction - EX_STAGE
@@ -161,6 +162,7 @@ module issue_read_operands
 
   logic [CVA6Cfg.NrIssuePorts-1:0] alu_valid_n, alu_valid_q;
   logic [CVA6Cfg.NrIssuePorts-1:0] aes_valid_n, aes_valid_q;
+  logic [CVA6Cfg.NrIssuePorts-1:0] vec_valid_n, vec_valid_q;
   logic [CVA6Cfg.NrIssuePorts-1:0] mult_valid_n, mult_valid_q;
   logic [CVA6Cfg.NrIssuePorts-1:0] fpu_valid_n, fpu_valid_q;
   logic [1:0] fpu_fmt_n, fpu_fmt_q;
@@ -289,6 +291,7 @@ module issue_read_operands
   assign fu_data_o = fu_data_q;
   assign alu_valid_o = alu_valid_q;
   assign aes_valid_o = aes_valid_q;
+  assign vec_valid_o = vec_valid_q;
   assign branch_valid_o = branch_valid_q;
   assign lsu_valid_o = lsu_valid_q;
   assign csr_valid_o = csr_valid_q;
@@ -737,6 +740,7 @@ module issue_read_operands
   always_comb begin
     alu_valid_n    = '0;
     aes_valid_n    = '0;
+    vec_valid_n    = '0;
     lsu_valid_n    = '0;
     mult_valid_n   = '0;
     fpu_valid_n    = '0;
@@ -770,6 +774,9 @@ module issue_read_operands
           AES: begin
             aes_valid_n[i] = 1'b1;
           end
+          VEC_FU: begin
+            vec_valid_n[i] = 1'b1;
+          end
           default: begin
             if (issue_instr_i[i].fu == FPU && CVA6Cfg.FpPresent) begin
               fpu_valid_n[i] = 1'b1;
@@ -789,6 +796,7 @@ module issue_read_operands
     if (flush_i) begin
       alu_valid_n    = '0;
       aes_valid_n    = '0;
+      vec_valid_n    = '0;
       lsu_valid_n    = '0;
       mult_valid_n   = '0;
       fpu_valid_n    = '0;
@@ -803,6 +811,7 @@ module issue_read_operands
     if (!rst_ni) begin
       alu_valid_q    <= '0;
       aes_valid_q    <= '0;
+      vec_valid_q    <= '0;
       lsu_valid_q    <= '0;
       mult_valid_q   <= '0;
       fpu_valid_q    <= '0;
@@ -814,6 +823,7 @@ module issue_read_operands
     end else begin
       alu_valid_q    <= alu_valid_n;
       aes_valid_q    <= aes_valid_n;
+      vec_valid_q    <= vec_valid_n;
       lsu_valid_q    <= lsu_valid_n;
       mult_valid_q   <= mult_valid_n;
       fpu_valid_q    <= fpu_valid_n;

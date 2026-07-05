@@ -72,6 +72,8 @@ module ex_stage
     input logic [CVA6Cfg.NrIssuePorts-1:0] alu_valid_i,
     // AES instruction is valid - ISSUE_STAGE
     input logic [CVA6Cfg.NrIssuePorts-1:0] aes_valid_i,
+    // VEC_FU instruction is valid - ISSUE_STAGE
+    input logic [CVA6Cfg.NrIssuePorts-1:0] vec_valid_i,
     // Branch unit instruction is valid - ISSUE_STAGE
     input logic [CVA6Cfg.NrIssuePorts-1:0] branch_valid_i,
     // Information of branch prediction - ISSUE_STAGE
@@ -283,7 +285,7 @@ module ex_stage
   // from ALU to branch unit
   logic alu_branch_res;  // branch comparison result
   logic [CVA6Cfg.NrALUs-1:0][CVA6Cfg.XLEN-1:0] alu_result;
-  logic [CVA6Cfg.XLEN-1:0] csr_result, mult_result, aes_result;
+  logic [CVA6Cfg.XLEN-1:0] csr_result, mult_result, aes_result, vec_result;
   logic [CVA6Cfg.VLEN-1:0] branch_result;
   bp_resolve_t resolved_branch;
   logic csr_ready, mult_ready;
@@ -293,7 +295,7 @@ module ex_stage
   fu_data_t [CVA6Cfg.NrALUs-1:0] alu_data;
 
   logic [CVA6Cfg.NrIssuePorts-1:0] one_cycle_select;
-  assign one_cycle_select = alu_valid_i | branch_valid_i | csr_valid_i | aes_valid_i;
+  assign one_cycle_select = alu_valid_i | branch_valid_i | csr_valid_i | aes_valid_i | vec_valid_i;
 
   fu_data_t one_cycle_data;
   logic [CVA6Cfg.VLEN-1:0] rs1_forwarding;
@@ -400,6 +402,8 @@ module ex_stage
       flu_trans_id_o = mult_trans_id;
     end else if (|aes_valid_i) begin
       flu_result_o = aes_result;
+    end else if (|vec_valid_i) begin
+      flu_result_o = vec_result;
     end
   end
 
@@ -435,6 +439,26 @@ module ex_stage
       .mult_trans_id_o(mult_trans_id)
   );
 
+  // ----------------
+  // VEC_FU (Custom AI Instructions)
+  // ----------------
+  fu_data_t vec_data;
+  logic vec_fu_valid;
+  always_comb begin
+    vec_data = (|vec_valid_i) ? fu_data_i[0] : '0;
+  end
+  vec_fu #(
+      .CVA6Cfg  (CVA6Cfg),
+      .fu_data_t(fu_data_t)
+  ) i_vec_fu (
+      .clk_i,
+      .rst_ni,
+      .operand_a_i (vec_data.operand_a),
+      .operand_b_i (vec_data.operand_b),
+      .operation_i (vec_data.operation),
+      .result_o    (vec_result),
+      .valid_o     (vec_fu_valid)
+  );
   // ----------------
   // FPU
   // ----------------
