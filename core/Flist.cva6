@@ -231,3 +231,4 @@ ${CVA6_REPO_DIR}/core/cva6_mmu/cva6_tlb.sv
 ${CVA6_REPO_DIR}/core/cva6_mmu/cva6_shared_tlb.sv
 
 // end of manifest
+core/vec_fu.sv
