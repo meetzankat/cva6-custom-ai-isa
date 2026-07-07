@@ -447,15 +447,12 @@ module ex_stage
   always_comb begin
     vec_data = (|vec_valid_i) ? fu_data_i[0] : '0;
   end
-  vec_fu #(
-      .CVA6Cfg  (CVA6Cfg),
-      .fu_data_t(fu_data_t)
-  ) i_vec_fu (
+  vec_fu i_vec_fu (
       .clk_i,
       .rst_ni,
       .operand_a_i (vec_data.operand_a),
       .operand_b_i (vec_data.operand_b),
-      .operation_i (vec_data.operation),
+      .funct7_i    (7'(vec_data.operation)),
       .result_o    (vec_result),
       .valid_o     (vec_fu_valid)
   );
