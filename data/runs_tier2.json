@@ -1,0 +1,211 @@
+[
+  {
+    "id": 28981513316,
+    "source": "github-actions",
+    "simulator": "verilator",
+    "run_number": 1,
+    "status": "completed",
+    "conclusion": "success",
+    "html_url": "https://github.com/meetzankat/cva6-custom-ai-isa/actions/runs/28981513316",
+    "head_branch": "master",
+    "head_sha": "361c4210",
+    "event": "schedule",
+    "created_at": "2026-07-08T22:57:52Z",
+    "updated_at": "2026-07-09T00:26:42Z",
+    "run_started_at": "2026-07-08T22:57:52Z",
+    "duration_seconds": 5330,
+    "total_jobs": 17,
+    "passed_jobs": 17,
+    "failed_jobs": 0,
+    "skipped_jobs": 0,
+    "jobs": [
+      {
+        "name": "RV64 Tier2 cv64a6_imafdc_sv39_hpdcache_wb / cv64a6_imafdc_tests",
+        "conclusion": "success",
+        "started_at": "2026-07-08T23:28:20Z",
+        "completed_at": "2026-07-08T23:33:23Z",
+        "duration_seconds": 303,
+        "html_url": "https://github.com/meetzankat/cva6-custom-ai-isa/actions/runs/28981513316/job/86005265865",
+        "arch": "rv64",
+        "config": "cv64a6_imafdc_sv39_hpdcache_wb",
+        "testcase": "cv64a6_imafdc_tests"
+      },
+      {
+        "name": "RV64 Tier2 cv64a6_imafdc_sv39_hpdcache_wb / dv-riscv-arch-test",
+        "conclusion": "success",
+        "started_at": "2026-07-08T23:28:19Z",
+        "completed_at": "2026-07-09T00:14:45Z",
+        "duration_seconds": 2786,
+        "html_url": "https://github.com/meetzankat/cva6-custom-ai-isa/actions/runs/28981513316/job/86005265867",
+        "arch": "rv64",
+        "config": "cv64a6_imafdc_sv39_hpdcache_wb",
+        "testcase": "dv-riscv-arch-test"
+      },
+      {
+        "name": "RV64 Tier2 cv64a6_imafdc_sv39_hpdcache_wb / dv-riscv-tests-p",
+        "conclusion": "success",
+        "started_at": "2026-07-08T23:28:20Z",
+        "completed_at": "2026-07-08T23:51:28Z",
+        "duration_seconds": 1388,
+        "html_url": "https://github.com/meetzankat/cva6-custom-ai-isa/actions/runs/28981513316/job/86005265901",
+        "arch": "rv64",
+        "config": "cv64a6_imafdc_sv39_hpdcache_wb",
+        "testcase": "dv-riscv-tests-p"
+      },
+      {
+        "name": "RV64 Tier2 cv64a6_imafdc_sv39_hpdcache_wb / dv-riscv-compliance",
+        "conclusion": "success",
+        "started_at": "2026-07-08T23:28:19Z",
+        "completed_at": "2026-07-08T23:59:44Z",
+        "duration_seconds": 1885,
+        "html_url": "https://github.com/meetzankat/cva6-custom-ai-isa/actions/runs/28981513316/job/86005265908",
+        "arch": "rv64",
+        "config": "cv64a6_imafdc_sv39_hpdcache_wb",
+        "testcase": "dv-riscv-compliance"
+      },
+      {
+        "name": "RV64 Tier2 cv64a6_imafdc_sv39_hpdcache_wb / dv-riscv-tests-v",
+        "conclusion": "success",
+        "started_at": "2026-07-08T23:28:19Z",
+        "completed_at": "2026-07-09T00:26:41Z",
+        "duration_seconds": 3502,
+        "html_url": "https://github.com/meetzankat/cva6-custom-ai-isa/actions/runs/28981513316/job/86005265912",
+        "arch": "rv64",
+        "config": "cv64a6_imafdc_sv39_hpdcache_wb",
+        "testcase": "dv-riscv-tests-v"
+      },
+      {
+        "name": "RV32 Tier2 cv32a65x / dv-riscv-compliance",
+        "conclusion": "success",
+        "started_at": "2026-07-08T23:28:20Z",
+        "completed_at": "2026-07-08T23:50:36Z",
+        "duration_seconds": 1336,
+        "html_url": "https://github.com/meetzankat/cva6-custom-ai-isa/actions/runs/28981513316/job/86005265959",
+        "arch": "rv32",
+        "config": "cv32a65x",
+        "testcase": "dv-riscv-compliance"
+      },
+      {
+        "name": "RV32 Tier2 cv32a65x / smoke-tests-cv32a65x",
+        "conclusion": "success",
+        "started_at": "2026-07-08T23:28:20Z",
+        "completed_at": "2026-07-08T23:30:53Z",
+        "duration_seconds": 153,
+        "html_url": "https://github.com/meetzankat/cva6-custom-ai-isa/actions/runs/28981513316/job/86005265966",
+        "arch": "rv32",
+        "config": "cv32a65x",
+        "testcase": "smoke-tests-cv32a65x"
+      },
+      {
+        "name": "RV32 Tier2 cv32a60x / dv-riscv-compliance",
+        "conclusion": "success",
+        "started_at": "2026-07-08T23:28:21Z",
+        "completed_at": "2026-07-08T23:52:05Z",
+        "duration_seconds": 1424,
+        "html_url": "https://github.com/meetzankat/cva6-custom-ai-isa/actions/runs/28981513316/job/86005265970",
+        "arch": "rv32",
+        "config": "cv32a60x",
+        "testcase": "dv-riscv-compliance"
+      },
+      {
+        "name": "RV32 Tier2 cv32a65x / dv-riscv-arch-test",
+        "conclusion": "success",
+        "started_at": "2026-07-08T23:28:19Z",
+        "completed_at": "2026-07-08T23:49:50Z",
+        "duration_seconds": 1291,
+        "html_url": "https://github.com/meetzankat/cva6-custom-ai-isa/actions/runs/28981513316/job/86005265973",
+        "arch": "rv32",
+        "config": "cv32a65x",
+        "testcase": "dv-riscv-arch-test"
+      },
+      {
+        "name": "RV32 Tier2 cv32a65x / cv32a6_tests",
+        "conclusion": "success",
+        "started_at": "2026-07-08T23:28:19Z",
+        "completed_at": "2026-07-08T23:31:07Z",
+        "duration_seconds": 168,
+        "html_url": "https://github.com/meetzankat/cva6-custom-ai-isa/actions/runs/28981513316/job/86005265975",
+        "arch": "rv32",
+        "config": "cv32a65x",
+        "testcase": "cv32a6_tests"
+      },
+      {
+        "name": "RV32 Tier2 cv32a65x / coremark",
+        "conclusion": "success",
+        "started_at": "2026-07-08T23:28:20Z",
+        "completed_at": "2026-07-08T23:34:42Z",
+        "duration_seconds": 382,
+        "html_url": "https://github.com/meetzankat/cva6-custom-ai-isa/actions/runs/28981513316/job/86005265980",
+        "arch": "rv32",
+        "config": "cv32a65x",
+        "testcase": "coremark"
+      },
+      {
+        "name": "RV32 Tier2 cv32a65x / dv-csr-embedded-tests",
+        "conclusion": "success",
+        "started_at": "2026-07-08T23:28:21Z",
+        "completed_at": "2026-07-08T23:32:23Z",
+        "duration_seconds": 242,
+        "html_url": "https://github.com/meetzankat/cva6-custom-ai-isa/actions/runs/28981513316/job/86005265985",
+        "arch": "rv32",
+        "config": "cv32a65x",
+        "testcase": "dv-csr-embedded-tests"
+      },
+      {
+        "name": "RV32 Tier2 cv32a60x / dv-riscv-arch-test",
+        "conclusion": "success",
+        "started_at": "2026-07-08T23:28:20Z",
+        "completed_at": "2026-07-08T23:49:00Z",
+        "duration_seconds": 1240,
+        "html_url": "https://github.com/meetzankat/cva6-custom-ai-isa/actions/runs/28981513316/job/86005265986",
+        "arch": "rv32",
+        "config": "cv32a60x",
+        "testcase": "dv-riscv-arch-test"
+      },
+      {
+        "name": "RV32 Tier2 cv32a65x / dv-riscv-tests-p",
+        "conclusion": "success",
+        "started_at": "2026-07-08T23:28:21Z",
+        "completed_at": "2026-07-08T23:39:26Z",
+        "duration_seconds": 665,
+        "html_url": "https://github.com/meetzankat/cva6-custom-ai-isa/actions/runs/28981513316/job/86005265987",
+        "arch": "rv32",
+        "config": "cv32a65x",
+        "testcase": "dv-riscv-tests-p"
+      },
+      {
+        "name": "RV32 Tier2 cv32a60x / cv32a6_tests",
+        "conclusion": "success",
+        "started_at": "2026-07-08T23:28:20Z",
+        "completed_at": "2026-07-08T23:31:53Z",
+        "duration_seconds": 213,
+        "html_url": "https://github.com/meetzankat/cva6-custom-ai-isa/actions/runs/28981513316/job/86005265989",
+        "arch": "rv32",
+        "config": "cv32a60x",
+        "testcase": "cv32a6_tests"
+      },
+      {
+        "name": "RV32 Tier2 cv32a65x / hwconfig_tests",
+        "conclusion": "success",
+        "started_at": "2026-07-08T23:28:19Z",
+        "completed_at": "2026-07-08T23:30:12Z",
+        "duration_seconds": 113,
+        "html_url": "https://github.com/meetzankat/cva6-custom-ai-isa/actions/runs/28981513316/job/86005265998",
+        "arch": "rv32",
+        "config": "cv32a65x",
+        "testcase": "hwconfig_tests"
+      },
+      {
+        "name": "RV32 Tier2 cv32a60x / dv-riscv-tests-p",
+        "conclusion": "success",
+        "started_at": "2026-07-08T23:28:19Z",
+        "completed_at": "2026-07-08T23:38:47Z",
+        "duration_seconds": 628,
+        "html_url": "https://github.com/meetzankat/cva6-custom-ai-isa/actions/runs/28981513316/job/86005266011",
+        "arch": "rv32",
+        "config": "cv32a60x",
+        "testcase": "dv-riscv-tests-p"
+      }
+    ]
+  }
+]
