@@ -1,5 +1,60 @@
 [
   {
+    "id": 32995112616,
+    "source": "github-actions",
+    "simulator": "verilator",
+    "run_number": 5,
+    "status": "completed",
+    "conclusion": "success",
+    "html_url": "https://github.com/meetzankat/cva6-custom-ai-isa/actions/runs/32995112616",
+    "head_branch": "dependabot/submodules/core/cache_subsystem/hpdcache-f404e7e",
+    "head_sha": "7b102d32",
+    "event": "pull_request",
+    "created_at": "2026-08-26T17:36:01Z",
+    "updated_at": "2026-08-26T17:45:31Z",
+    "run_started_at": "2026-08-26T17:36:01Z",
+    "duration_seconds": 570,
+    "total_jobs": 3,
+    "passed_jobs": 3,
+    "failed_jobs": 0,
+    "skipped_jobs": 0,
+    "jobs": [
+      {
+        "name": "RV64 Tier1 cv64a6_imafdc_sv39_hpdcache_wb / cv64a6_imafdc_tests",
+        "conclusion": "success",
+        "started_at": "2026-08-26T17:38:14Z",
+        "completed_at": "2026-08-26T17:43:30Z",
+        "duration_seconds": 316,
+        "html_url": "https://github.com/meetzankat/cva6-custom-ai-isa/actions/runs/32995112616/job/98262889105",
+        "arch": "rv64",
+        "config": "cv64a6_imafdc_sv39_hpdcache_wb",
+        "testcase": "cv64a6_imafdc_tests"
+      },
+      {
+        "name": "RV32 Tier1 cv32a65x / smoke-tests-cv32a65x",
+        "conclusion": "success",
+        "started_at": "2026-08-26T17:38:13Z",
+        "completed_at": "2026-08-26T17:42:56Z",
+        "duration_seconds": 283,
+        "html_url": "https://github.com/meetzankat/cva6-custom-ai-isa/actions/runs/32995112616/job/98262889211",
+        "arch": "rv32",
+        "config": "cv32a65x",
+        "testcase": "smoke-tests-cv32a65x"
+      },
+      {
+        "name": "RV32 Tier1 cv32a60x / cv32a6_tests",
+        "conclusion": "success",
+        "started_at": "2026-08-26T17:38:13Z",
+        "completed_at": "2026-08-26T17:45:31Z",
+        "duration_seconds": 438,
+        "html_url": "https://github.com/meetzankat/cva6-custom-ai-isa/actions/runs/32995112616/job/98262889258",
+        "arch": "rv32",
+        "config": "cv32a60x",
+        "testcase": "cv32a6_tests"
+      }
+    ]
+  },
+  {
     "id": 30475965795,
     "source": "github-actions",
     "simulator": "verilator",
