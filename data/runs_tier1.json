@@ -1,5 +1,60 @@
 [
   {
+    "id": 35129029298,
+    "source": "github-actions",
+    "simulator": "verilator",
+    "run_number": 8,
+    "status": "completed",
+    "conclusion": "success",
+    "html_url": "https://github.com/meetzankat/cva6-custom-ai-isa/actions/runs/35129029298",
+    "head_branch": "dependabot/submodules/core/cache_subsystem/hpdcache-a23eac2",
+    "head_sha": "f5974c25",
+    "event": "pull_request",
+    "created_at": "2026-09-16T17:34:29Z",
+    "updated_at": "2026-09-16T17:42:07Z",
+    "run_started_at": "2026-09-16T17:34:29Z",
+    "duration_seconds": 458,
+    "total_jobs": 3,
+    "passed_jobs": 3,
+    "failed_jobs": 0,
+    "skipped_jobs": 0,
+    "jobs": [
+      {
+        "name": "RV32 Tier1 cv32a65x / smoke-tests-cv32a65x",
+        "conclusion": "success",
+        "started_at": "2026-09-16T17:36:17Z",
+        "completed_at": "2026-09-16T17:38:49Z",
+        "duration_seconds": 152,
+        "html_url": "https://github.com/meetzankat/cva6-custom-ai-isa/actions/runs/35129029298/job/104905722952",
+        "arch": "rv32",
+        "config": "cv32a65x",
+        "testcase": "smoke-tests-cv32a65x"
+      },
+      {
+        "name": "RV32 Tier1 cv32a60x / cv32a6_tests",
+        "conclusion": "success",
+        "started_at": "2026-09-16T17:36:17Z",
+        "completed_at": "2026-09-16T17:39:33Z",
+        "duration_seconds": 196,
+        "html_url": "https://github.com/meetzankat/cva6-custom-ai-isa/actions/runs/35129029298/job/104905722975",
+        "arch": "rv32",
+        "config": "cv32a60x",
+        "testcase": "cv32a6_tests"
+      },
+      {
+        "name": "RV64 Tier1 cv64a6_imafdc_sv39_hpdcache_wb / cv64a6_imafdc_tests",
+        "conclusion": "success",
+        "started_at": "2026-09-16T17:36:17Z",
+        "completed_at": "2026-09-16T17:42:07Z",
+        "duration_seconds": 350,
+        "html_url": "https://github.com/meetzankat/cva6-custom-ai-isa/actions/runs/35129029298/job/104905722996",
+        "arch": "rv64",
+        "config": "cv64a6_imafdc_sv39_hpdcache_wb",
+        "testcase": "cv64a6_imafdc_tests"
+      }
+    ]
+  },
+  {
     "id": 34383774839,
     "source": "github-actions",
     "simulator": "verilator",
