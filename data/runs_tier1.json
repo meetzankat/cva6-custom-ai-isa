@@ -1,5 +1,60 @@
 [
   {
+    "id": 35896541460,
+    "source": "github-actions",
+    "simulator": "verilator",
+    "run_number": 10,
+    "status": "completed",
+    "conclusion": "success",
+    "html_url": "https://github.com/meetzankat/cva6-custom-ai-isa/actions/runs/35896541460",
+    "head_branch": "dependabot/submodules/verif/sim/dv-3b69315",
+    "head_sha": "dbea7fa3",
+    "event": "pull_request",
+    "created_at": "2026-09-23T17:34:32Z",
+    "updated_at": "2026-09-23T17:42:02Z",
+    "run_started_at": "2026-09-23T17:34:32Z",
+    "duration_seconds": 450,
+    "total_jobs": 3,
+    "passed_jobs": 3,
+    "failed_jobs": 0,
+    "skipped_jobs": 0,
+    "jobs": [
+      {
+        "name": "RV32 Tier1 cv32a60x / cv32a6_tests",
+        "conclusion": "success",
+        "started_at": "2026-09-23T17:36:05Z",
+        "completed_at": "2026-09-23T17:39:05Z",
+        "duration_seconds": 180,
+        "html_url": "https://github.com/meetzankat/cva6-custom-ai-isa/actions/runs/35896541460/job/107302344846",
+        "arch": "rv32",
+        "config": "cv32a60x",
+        "testcase": "cv32a6_tests"
+      },
+      {
+        "name": "RV64 Tier1 cv64a6_imafdc_sv39_hpdcache_wb / cv64a6_imafdc_tests",
+        "conclusion": "success",
+        "started_at": "2026-09-23T17:36:06Z",
+        "completed_at": "2026-09-23T17:42:02Z",
+        "duration_seconds": 356,
+        "html_url": "https://github.com/meetzankat/cva6-custom-ai-isa/actions/runs/35896541460/job/107302344941",
+        "arch": "rv64",
+        "config": "cv64a6_imafdc_sv39_hpdcache_wb",
+        "testcase": "cv64a6_imafdc_tests"
+      },
+      {
+        "name": "RV32 Tier1 cv32a65x / smoke-tests-cv32a65x",
+        "conclusion": "success",
+        "started_at": "2026-09-23T17:36:06Z",
+        "completed_at": "2026-09-23T17:38:48Z",
+        "duration_seconds": 162,
+        "html_url": "https://github.com/meetzankat/cva6-custom-ai-isa/actions/runs/35896541460/job/107302345027",
+        "arch": "rv32",
+        "config": "cv32a65x",
+        "testcase": "smoke-tests-cv32a65x"
+      }
+    ]
+  },
+  {
     "id": 35129029298,
     "source": "github-actions",
     "simulator": "verilator",
